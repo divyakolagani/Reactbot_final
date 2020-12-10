@@ -1,0 +1,26 @@
+{
+  "name": "reactbot_final",
+  "version": "1.0.0",
+  "description": "A chatbot for webpage",
+  "main": "index.js",
+  "engines": {
+    "node": "14.15.1",
+    "npm": "6.14.8"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyakolagani/Reactbot_final.git"
+  },
+  "author": "divyakolagani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/divyakolagani/Reactbot_final/issues"
+  },
+  "homepage": "https://github.com/divyakolagani/Reactbot_final#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
