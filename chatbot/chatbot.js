@@ -7,10 +7,8 @@
       client_email: config.clientEmail,
       private_key: config.privateKey
     }
-    console.log('credentials divya',config);
     const sessionClient = new dialogFlow.SessionsClient({projectId, credentials});
     const sessionPath = sessionClient.sessionPath(projectId, config.dialogFlowLanguageCode)
-    console.log('sessionPath',sessionPath)
 
 module.exports = {
     textQuery: async (text,parametres = {}) => {
