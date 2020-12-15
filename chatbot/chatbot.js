@@ -7,8 +7,6 @@
       client_email: config.clientEmail,
       private_key: config.privateKey
     }
-    console.log('credentials',credentials);
-    console.log('projectId',projectId)
     const sessionClient = new dialogFlow.SessionsClient({projectId, credentials});
     const sessionPath = sessionClient.sessionPath(projectId, config.dialogFlowLanguageCode)
 
