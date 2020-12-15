@@ -8,7 +8,7 @@
       private_key: config.privateKey
     }
     console.log('5555555555555555',projectId)
-    console.log('credentials divya',credentials)
+    console.log('credentials divya',credentials);
     const sessionClient = new dialogFlow.SessionsClient({projectId, credentials});
     const sessionPath = sessionClient.sessionPath(projectId, config.dialogFlowLanguageCode)
 
