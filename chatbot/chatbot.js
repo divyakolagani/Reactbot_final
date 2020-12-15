@@ -7,8 +7,10 @@
       client_email: config.clientEmail,
       private_key: config.privateKey
     }
-    console.log('credentials divya',credentials);
+    console.log('credentials divya',config);
     const sessionClient = new dialogFlow.SessionsClient({projectId, credentials});
+    console.log('session clienet created')
+    console.log('projectid',projectId)
     const sessionPath = sessionClient.sessionPath(projectId, config.dialogFlowLanguageCode)
 
 module.exports = {
