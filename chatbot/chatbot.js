@@ -9,7 +9,6 @@
     }
     console.log('credentials divya',config);
     const sessionClient = new dialogFlow.SessionsClient({projectId, credentials});
-    console.log('projectid',projectId)
     const sessionPath = sessionClient.sessionPath(projectId, config.dialogFlowLanguageCode)
     console.log('sessionPath',sessionPath)
 
