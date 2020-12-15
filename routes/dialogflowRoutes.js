@@ -2,7 +2,6 @@ const chatbot = require('../chatbot/chatbot');
 module.exports = app => {
     
 app.get('/',(req,res) => {
-    console.log('request sent');
     res.send({'Hello': 'I am Divya Kolagani'});
 });
 
