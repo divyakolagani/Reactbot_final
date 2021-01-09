@@ -32,7 +32,6 @@ class ChatBot extends Component {
     }
 
     async df_text_query(queryText) {
-        console.log(' i am here hitting from text query')
         let says = {
             speaks: 'me',
             msg: {
@@ -66,10 +65,8 @@ class ChatBot extends Component {
     }
 
     async df_event_query(eventName) {
-        console.log('i am trying to hit webserver 5000')
         try {
         const res = await axios.post('/api/df_event_query', {event: eventName}, {userID: cookies.get('userID')});
-        console.log('res', res)
         for(let msg of res.data.fulfillmentMessages) {
            let says = {
                 speaks: 'bot',
@@ -86,7 +83,6 @@ class ChatBot extends Component {
                 }
             }
         }
-        console.log('exception', e);
 
         this.setState({messages: [...this.state.messages, says]});
     }
@@ -115,7 +111,6 @@ class ChatBot extends Component {
     _handleQuickReplyPayload(event, payload, text) {
         event.preventDefault();
         event.stopPropagation();
-        console.log('payload', payload)
         switch (payload)
         {
         case 'training_master_package': this.df_event_query('MASTERPACKAGE');

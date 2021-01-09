@@ -23,8 +23,6 @@ module.exports = (app) => {
     async function demand() {
       Demand.findOne({ location: agent.parameters['geo-state'] }, (err, location) => {
         if (location !== null) {
-          // eslint-disable-next-line no-plusplus
-          // eslint-disable-next-line no-param-reassign
           location.counter++;
           location.save();
         } else {
