@@ -1,0 +1,4 @@
+/node_modules
+/public/build
+/client
+/chatbot/structjson.js
