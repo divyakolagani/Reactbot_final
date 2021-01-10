@@ -1,9 +1,6 @@
 const chatbot = require('../chatbot/chatbot');
 
 module.exports = (app) => {
- app.get('/',(req,res) => {
-    res.send({'Hello': 'I am Divya Kolagani'});
-});
 
   app.post('/api/df_text_query', async (req, res) => {
     const responses = await chatbot.textQuery(req.body.text, req.body.userID, req.body.parametres);
